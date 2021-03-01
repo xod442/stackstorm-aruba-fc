@@ -10,4 +10,4 @@ trigger:
     unit: minutes
 
 action:
-  ref: "arubafc.get-arubafc-alarms"
+  ref: "arubafc.get_arubafc_alarms"
