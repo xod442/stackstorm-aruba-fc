@@ -45,5 +45,5 @@ Actions are defined in two groups:
 
 ### Orquestra Workflows: will not
 * ``sendsnow``
-* ``performfit``
+* ``get-arubafc-events``
 * ``getswitches``
