@@ -23,7 +23,7 @@ from st2common.runners.base_action import Action
 
 class AfcBaseAction(Action):
     def __init__(self,config):
-        super(AfcfmBaseAction, self).__init__(config)
+        super(AfcBaseAction, self).__init__(config)
         self.client = self._get_client()
 
     def _get_client(self):

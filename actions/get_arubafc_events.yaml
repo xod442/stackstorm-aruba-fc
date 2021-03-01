@@ -1,0 +1,7 @@
+---
+name: get_arubafc_events
+pack: arubafc
+description: Get events from AFC and save in mongo DB
+runner_type: python-script
+entry_point: get_arubafc_events.py
+enabled: true
