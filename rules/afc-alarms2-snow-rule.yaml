@@ -1,6 +1,6 @@
 ---
 name: "afc-alarms2-snow-rule"
-description: "Get Aruba AFC alarms and send to service now."
+description: "Get Aruba AFC alarms from mongo and send to service now."
 enabled: false
 
 trigger:
@@ -10,4 +10,4 @@ trigger:
     unit: minutes
 
 action:
-  ref: "arubafc.mongo-alarms2-snow"
+  ref: "arubafc.afc-mongo-alarms2-snow"

@@ -13,10 +13,10 @@ tasks:
 
   snowalerts:
     with: <% ctx().alarms %>
-    action: servicenow.create_record table="u_hpeov_alarms" payload='<% item() %>'
+    action: servicenow.create_record table="u_arubafc_alarms" payload='<% item() %>'
     next:
       - when: <% succeeded() %>
         do: processalarms
 
   processalarms:
-    action: hpeoneview.process_alarms alarms=<% ctx().alarms %>
+    action: arubafc.process_alarms alarms=<% ctx().alarms %>
