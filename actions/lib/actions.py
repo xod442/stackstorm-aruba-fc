@@ -35,3 +35,16 @@ class AfcBaseAction(Action):
         client.connect()
 
         return client
+
+class MongoBaseAction(Action):
+    def __init__(self,config):
+        super(MongoBaseAction, self).__init__(config=config)
+        self.dbclient = self._get_db_client()
+
+    def _get_db_client(self):
+        dbuser = self.config['dbuser']
+        dbpass = self.config['dbpass']
+
+        dbclient = MongoClient('mongodb://%s:%s@localhost:27017/' % (dbuser,dbpass))
+
+        return dbclient
