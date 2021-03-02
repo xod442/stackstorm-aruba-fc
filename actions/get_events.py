@@ -41,6 +41,7 @@ class eventLookup(AfcBaseAction):
                           'u_uuid': event['uuid'],
                           'u_desc': event['description'],
                           'u_name' : event['data']['object_name'],
+                          'u_created': event['log_date'],
                           'u_typeo' : event['data']['object_type']
                           }
                     event_data.append(out)

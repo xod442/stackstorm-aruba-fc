@@ -39,6 +39,7 @@ class alarmLookup(AfcBaseAction):
                           'u_sev': alarm['severity'],
                           'u_uuid': alarm['uuid'],
                           'u_desc': alarm['description'],
+                          'u_created': alarm['log_date'],
                           'u_snowack' : 'no'
                           }
                     alarm_data.append(out)
