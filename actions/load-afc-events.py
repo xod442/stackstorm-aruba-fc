@@ -45,5 +45,5 @@ class loadDb(MongoBaseAction):
                 new_event['u_eventType']=event['u_eventType']
                 new_event['u_name']=event['u_name']
                 new_event['u_process']='no'
-                write_record = known.insert_one(new_alarm)
+                write_record = known.insert_one(new_event)
         return (records)
