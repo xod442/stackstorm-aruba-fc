@@ -2,3 +2,5 @@
 ipaddress: "172.18.1.66"
 username: "admin"
 password: "plexxi"
+dbuser: "appUser"
+dbpass: 'passwordForAppUser'
