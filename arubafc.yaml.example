@@ -1,6 +1,6 @@
 ---
-ipaddress: "172.18.1.66"
+ipaddress: "172.20.8.73"
 username: "admin"
-password: "plexxi"
+password: "Plexxi100!"
 dbuser: "appUser"
 dbpass: 'passwordForAppUser'
