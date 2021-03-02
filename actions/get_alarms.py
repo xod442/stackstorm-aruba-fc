@@ -34,14 +34,14 @@ class alarmLookup(AfcBaseAction):
                 typex = alarm['record_type']
                 if typex == 'ALARM':
                     # Build dictionary to add to list
-                    timestamp = datetime.datetime.fromtimestamp(alarm['log_date']).strftime('%c')
+                    created = int(alarm['log_date'] / 10)
                     out = {
                           'u_eventType': alarm['data']['event_type'],
                           'u_typex': alarm['record_type'],
                           'u_sev': alarm['severity'],
                           'u_uuid': alarm['uuid'],
                           'u_desc': alarm['description'],
-                          'u_created': timestamp,
+                          'u_created': created,
                           'u_snowack' : 'no'
                           }
                     alarm_data.append(out)

@@ -34,7 +34,7 @@ class eventLookup(AfcBaseAction):
             for event in afc_audits:
                 typex = event['record_type']
                 if typex == 'EVENT':
-                    timestamp = datetime.datetime.fromtimestamp(event['log_date']).strftime('%c')
+                    created = int(event['log_date'] /10)
                     # Build dictionary to add to list
                     out = {
                           'u_eventType': event['data']['event_type'],
@@ -43,7 +43,7 @@ class eventLookup(AfcBaseAction):
                           'u_uuid': event['uuid'],
                           'u_desc': event['description'],
                           'u_name' : event['data']['object_name'],
-                          'u_created': timestamp,
+                          'u_created': created,
                           'u_typeo' : event['data']['object_type']
                           }
                     event_data.append(out)
