@@ -18,6 +18,8 @@
 # __maintainer__ = "Rick Kauffman"
 # __email__ = "rick.a.kauffman@hpe.com"
 
+import pymongo
+from pymongo import MongoClient
 from pyhpecfm.client import CFMClient
 from st2common.runners.base_action import Action
 
