@@ -45,6 +45,6 @@ class MongoBaseAction(Action):
         dbuser = self.config['dbuser']
         dbpass = self.config['dbpass']
 
-        dbclient = MongoClient('mongodb://%s:%s@localhost:27017/' % (dbuser,dbpass))
+        dbclient = MongoClient.connect('mongodb://%s:%s@localhost:27017/' % (dbuser,dbpass))
 
         return dbclient
