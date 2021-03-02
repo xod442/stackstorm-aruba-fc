@@ -37,11 +37,11 @@ class loadDb(MongoBaseAction):
             records = known.find(myquery).count()
             if records == 0:
                 new_alarm['u_vendor']='aruba'
-                new_alarm['u_sev']=alarm['sev']
-                new_alarm['u_desc']=alarm['desc']
-                new_alarm['u_uuid']=alarm['uuid']
-                new_alarm['_id']=alarm['created']
-                new_alarm['u_eventType']=alarm['eventType']
+                new_alarm['u_sev']=alarm['u_sev']
+                new_alarm['u_desc']=alarm['u_desc']
+                new_alarm['u_uuid']=alarm['u_uuid']
+                new_alarm['_id']=alarm['u_created']
+                new_alarm['u_eventType']=alarm['u_eventType']
                 new_alarm['u_process']='no'
                 write_record = known.insert_one(new_alarm)
         return (records)
