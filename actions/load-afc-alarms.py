@@ -33,7 +33,7 @@ class loadDb(MongoBaseAction):
         new_alarm={}
 
         for alarm in alarms:
-            myquery = { "_id" : alarm['created'] }
+            myquery = { "_id" : alarm['u_created'] }
             records = known.find(myquery).count()
             if records == 0:
                 new_alarm['u_vendor']='aruba'
