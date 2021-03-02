@@ -42,7 +42,7 @@ class loadDb(MongoBaseAction):
                 new_event['u_uuid']=event['u_uuid']
                 new_event['_id']=event['u_created']
                 new_event['u_typeo']=event['u_typeo']
-                new_event['u_eventType']=event['u_eventType']
+                new_event['u_eventtype']=event['u_eventtype']
                 new_event['u_name']=event['u_name']
                 new_event['u_process']='no'
                 write_record = known.insert_one(new_event)

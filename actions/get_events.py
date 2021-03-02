@@ -37,7 +37,7 @@ class eventLookup(AfcBaseAction):
                     created = int(event['log_date'] /10)
                     # Build dictionary to add to list
                     out = {
-                          'u_eventType': event['data']['event_type'],
+                          'u_eventtype': event['data']['event_type'],
                           'u_typex': event['record_type'],
                           'u_sev': event['severity'],
                           'u_uuid': event['uuid'],

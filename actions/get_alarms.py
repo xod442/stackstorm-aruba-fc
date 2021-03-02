@@ -36,7 +36,7 @@ class alarmLookup(AfcBaseAction):
                     # Build dictionary to add to list
                     created = int(alarm['log_date'] / 10)
                     out = {
-                          'u_eventType': alarm['data']['event_type'],
+                          'u_eventtype': alarm['data']['event_type'],
                           'u_typex': alarm['record_type'],
                           'u_sev': alarm['severity'],
                           'u_uuid': alarm['uuid'],

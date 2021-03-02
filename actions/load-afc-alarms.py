@@ -41,7 +41,7 @@ class loadDb(MongoBaseAction):
                 new_alarm['u_desc']=alarm['u_desc']
                 new_alarm['u_uuid']=alarm['u_uuid']
                 new_alarm['_id']=alarm['u_created']
-                new_alarm['u_eventType']=alarm['u_eventType']
+                new_alarm['u_eventtype']=alarm['u_eventtype']
                 new_alarm['u_process']='no'
                 write_record = known.insert_one(new_alarm)
         return (records)
