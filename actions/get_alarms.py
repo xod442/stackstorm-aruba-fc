@@ -21,6 +21,7 @@
 
 from pyhpecfm import system
 from lib.actions import AfcBaseAction
+import datetime
 
 class alarmLookup(AfcBaseAction):
     def run(self):
@@ -33,13 +34,14 @@ class alarmLookup(AfcBaseAction):
                 typex = alarm['record_type']
                 if typex == 'ALARM':
                     # Build dictionary to add to list
+                    timestamp = datetime.datetime.fromtimestamp(alarm['log_date']).strftime('%c')
                     out = {
                           'u_eventType': alarm['data']['event_type'],
                           'u_typex': alarm['record_type'],
                           'u_sev': alarm['severity'],
                           'u_uuid': alarm['uuid'],
                           'u_desc': alarm['description'],
-                          'u_created': alarm['log_date'],
+                          'u_created': timestamp,
                           'u_snowack' : 'no'
                           }
                     alarm_data.append(out)

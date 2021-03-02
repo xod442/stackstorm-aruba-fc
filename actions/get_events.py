@@ -22,6 +22,7 @@
 
 from pyhpecfm import system
 from lib.actions import AfcBaseAction
+import datetime
 
 class eventLookup(AfcBaseAction):
     def run(self):
@@ -33,6 +34,7 @@ class eventLookup(AfcBaseAction):
             for event in afc_audits:
                 typex = event['record_type']
                 if typex == 'EVENT':
+                    timestamp = datetime.datetime.fromtimestamp(event['log_date']).strftime('%c')
                     # Build dictionary to add to list
                     out = {
                           'u_eventType': event['data']['event_type'],
@@ -41,7 +43,7 @@ class eventLookup(AfcBaseAction):
                           'u_uuid': event['uuid'],
                           'u_desc': event['description'],
                           'u_name' : event['data']['object_name'],
-                          'u_created': event['log_date'],
+                          'u_created': timestamp,
                           'u_typeo' : event['data']['object_type']
                           }
                     event_data.append(out)
