@@ -28,7 +28,7 @@ class loadDb(MongoBaseAction):
     def run(self, alarms):
 
         mydb = self.dbclient["app_db"]
-        known = mydb["dwralarms"]
+        known = mydb["afcalarms"]
 
         for a in alarms:
             known.update_one({"_id":a['_id']},{"$set":{"u_process":"yes"}})

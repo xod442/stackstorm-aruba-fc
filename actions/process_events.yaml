@@ -6,6 +6,6 @@ runner_type: python-script
 entry_point: process_events.py
 enabled: true
 parameters:
-  alarms:
+  events:
     required: true
     type: array
