@@ -19,4 +19,4 @@ tasks:
         do: processevents
 
   processevents:
-    action: arubafc.process_events alarms=<% ctx().events %>
+    action: arubafc.process_events events=<% ctx().events %>
